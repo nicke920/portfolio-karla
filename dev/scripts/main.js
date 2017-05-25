@@ -1,5 +1,4 @@
 $(function()  {
-	new WOW().init();
 	//SMOOTH SCROLL 
 	$('a[href*="#"]:not([href="#"])').click(function() {
 	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -13,43 +12,6 @@ $(function()  {
 	    }
 	  }
 	});
-
-	$('#home_link').on('hover', function() {
-		$(this).addClass('wow animated rollIn');
-	})
-
-	$('#home_link').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('body').offset().top
-		    }, 1000);
-	})
-	$('#about_link').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('.aboutMe').offset().top
-		    }, 1000);
-	})
-	$('#about_link2').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('.aboutMe').offset().top
-		    }, 1000);
-	})
-	$('#work_link').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('.work').offset().top
-		    }, 1000);
-	})
-	$('#skills_link').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('.skills').offset().top
-		    }, 1000);
-	})
-	$('#contact_link').on('click', function() {
-			$('html, body').animate({
-		        scrollTop: $('footer').offset().top
-		    }, 1000);
-	})
-
-
 
 	//NAV BAR CHANGE ON SCROLL
 	$(window).scroll(function() {
