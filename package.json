@@ -25,14 +25,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MichellePayne/NomadProject.git"
-  },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MichellePayne/NomadProject/issues"
-  },
-  "homepage": "https://github.com/MichellePayne/NomadProject#readme"
+  "license": "ISC"
 }
