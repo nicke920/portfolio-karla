@@ -36,12 +36,27 @@
 // 	portfolio.events();
 // });
 
+
 $(function() {
 	// $('.main-carousel').flickity({
 	//   // options
 	//   cellAlign: 'left',
 	//   contain: true
 	// });
+
+	jQuery.fn.extend({
+	    toggleText: function (a, b){
+	        var isClicked = false;
+	        var that = this;
+	        this.click(function (){
+	            if (isClicked) { that.text(a); isClicked = false; }
+	            else { that.text(b); isClicked = true; }
+	        });
+	        return this;
+	    }
+	});
+
+	
 
 	$('.carousel-cell').hover(function() {
 		$(this).find('.carousel-description').toggleClass('description-hover');
@@ -51,8 +66,10 @@ $(function() {
 	})
 
 	$('.read-more').click(function() {
-		$('.moreCell').toggleClass('hidden');
+		$('.moreCell').slideToggle('slow');
 	})
+
+
 
 	$('.fa-chevron-circle-right').click(function() {
 		$('.row1').toggleClass('hidden');
