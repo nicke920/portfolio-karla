@@ -1,64 +1,75 @@
-// const portfolio = {};
-// portfolio.previousNums = [];
-// portfolio.events = function() {
-// 	$('.seeMore__skills').on('click', function(event) {
-// 		event.preventDefault();
-// 		/* Act on the event */
-// 		$('.otherSkills').slideToggle('slow');
-// 	});
-// 	$('a[href*="#"]:not([href="#"])').click(function() {
-// 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-// 			var target = $(this.hash);
-// 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-// 			if (target.length) {
-// 				$('html, body').animate({
-// 					scrollTop: target.offset().top
-// 				}, 1000);
-// 				return false;
-// 			}
-// 		}
-// 	});
-// 	$('nav button').on('click', function(event) {
-// 		event.preventDefault();
-// 		/* Act on the event */
-// 		$('nav ul').slideToggle('fast');
-// 	});
-// }
-
-
-// portfolio.init = function() {
-	
-// 	$('.otherSkills').hide();
-// }
-
-// $(function() {
-// 	portfolio.init();
-// 	portfolio.events();
-// });
-
-
 $(function() {
-	// $('.main-carousel').flickity({
-	//   // options
-	//   cellAlign: 'left',
-	//   contain: true
-	// });
-
-	jQuery.fn.extend({
-	    toggleText: function (a, b){
-	        var isClicked = false;
-	        var that = this;
-	        this.click(function (){
-	            if (isClicked) { that.text(a); isClicked = false; }
-	            else { that.text(b); isClicked = true; }
-	        });
-	        return this;
+	$('.main-carousel').flickity({
+	  // options
+	  cellAlign: 'left',
+	  contain: true
+	});
+	
+	//SMOOTH SCROLL 
+	$('a[href*="#"]:not([href="#"])').click(function() {
+	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	    var target = $(this.hash);
+	    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	    if (target.length) {
+	      $('html, body').animate({
+	        scrollTop: target.offset().top
+	      }, 1000);
+	      return false;
 	    }
+	  }
 	});
 
+	$('#home_link').on('click', () => {
+			$('html, body').animate({
+		        scrollTop: $('body').offset().top
+		    }, 1500);
+	})
+	$('#about_link').on('click', () => {
+			$('html, body').animate({
+		        scrollTop: $('.aboutDiv').offset().top
+		    }, 1500);
+	})
+	$('#arch_link').on('click', () => {
+			$('html, body').animate({
+		        scrollTop: $('body').offset().top
+		    }, 1500);
+	})
+	$('#photo_link').on('click', () => {
+			$('html, body').animate({
+		        scrollTop: $('body').offset().top
+		    }, 1500);
+	})
+	$('#contact_link').on('click', () => {
+			$('html, body').animate({
+		        scrollTop: $('body').offset().top
+		    }, 1500);
+	})
+
+	// $('nav').on('scroll', () => {
+	// 	$(this).css({
+	// 		'background': 'white'
+	// 	})
+	// })
+
+	//NAV BAR CHANGE ON SCROLL
+	$(window).scroll(function() {
+		if($(this).scrollTop() > 150) {
+			$('nav').addClass('main-nav-scrolled')
+		} else {
+			$('nav').removeClass('main-nav-scrolled')
+		}
+	})
+
+	$('.hamburgerMenu').click(() => {
+		$('ul.nav-bar').slideToggle();
+	})
+
+
+
+
 	
 
-	$('.carousel-cell').hover(function() {
+	$('.carousel-cell-first').hover(function() {
 		$(this).find('.carousel-description').toggleClass('description-hover');
 		$(this).find('.carousel-image').toggleClass('description-hover');
 		$(this).find('.carousel-photo-description').toggleClass('description-hover');
@@ -78,5 +89,10 @@ $(function() {
 	$('.fa-chevron-circle-left').click(function() {
 		$('.row1').toggleClass('hidden');
 		$('.row2').toggleClass('hidden');
+	})
+
+	$('.carousel-cell').on('click', function() {
+		console.log(this);
+
 	})
 })

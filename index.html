@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Karla Perez</title>
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900|Montserrat:100,200,300,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
 	<link rel="stylesheet" href="public/styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
@@ -16,21 +17,23 @@
 			<div class="logo">KP</div>
 			<ul class="nav-bar fl-row">
 				<li>
-					<a href="">Home</a>
+					<a id="about_link" href="#about">About</a>
 				</li>
 				<li>
-					<a href="">About</a>
+					<a id="arch_link" href="#architecture">Architecture</a>
 				</li>
 				<li>
-					<a href="">Architecture</a>
+					<a id="photo_link" href="#photography">Photography</a>
 				</li>
 				<li>
-					<a href="">Photography</a>
-				</li>
-				<li>
-					<a href="">Contact</a>
+					<a id="contact_link" href="#contact">Contact</a>
 				</li>
 			</ul>
+			<div class="hamburgerMenu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 		</nav>
 		<div class="header-text">
 			<h1>Karla Perez</h1>
@@ -45,8 +48,8 @@
 </header>
 
 <main>
-	<section class="wrapper fl-col">
-		<div>
+	<section class="wrapper fl-col aboutDiv">
+		<div class="sectionTitle">
 			<h2>About</h2>
 			<div class="keyline"></div>
 		</div>
@@ -60,30 +63,31 @@
 				</p>
 				<p>
 					Currently she resides in Mexico City where she has developed skills and knowledge in luxury finishes, comfort and interiors. Her aim as an architect  is to achieve  a positive impact on society by contributing with innovative ideas in the field of ecology and construction.
+					<a href="" class="btn btn-light viewCV">View my CV</a>
 				</p>
 			</div>
 
 		</div>
 	</section>
-	<section class="sectionDarkGrey posr">
+	<section class="sectionDarkGrey fl-col posr archDiv">
 		<div class='secondSVG'>
 			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
 			<path d="M0,0 L 100,0 100,100 30,0 0,100 Z" />
 			</svg>
 		</div>
 		<div class="wrapper">
-			<div class="section-title">
-				<h2>Architecture Projects</h2>
+			<div class="sectionTitle">
+				<h2>Architecture</h2>
 				<div class="keyline"></div>
 			</div>
 			<div>
-				<div class="main-carousel content-wrapper">
-					<div class="carousel-cell cell">
+				<div class="main-carousel-first content-wrapper">
+					<div class="carousel-cell-first cell">
 						<div class="carousel-image image1"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2017</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -96,12 +100,12 @@
 						</div>
 					</div>
 
-					<div class="carousel-cell cell">
+					<div class="carousel-cell-first cell">
 						<div class="carousel-image image2"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2017</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -114,12 +118,12 @@
 						</div>
 					</div>
 
-					<div class="carousel-cell cell">
+					<div class="carousel-cell-first cell">
 						<div class="carousel-image image2"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2017</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -132,12 +136,12 @@
 						</div>
 					</div>
 
-					<div class="carousel-cell cell">
+					<div class="carousel-cell-first cell">
 						<div class="carousel-image image1"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2017</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -150,12 +154,12 @@
 						</div>
 					</div>
 
-					<div class="carousel-cell moreCell">
+					<div class="carousel-cell-first moreCell">
 						<div class="carousel-image image1"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2017</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -168,12 +172,12 @@
 						</div>
 					</div>
 
-					<div class="carousel-cell moreCell">
+					<div class="carousel-cell-first moreCell">
 						<div class="carousel-image image1"></div>
 						<div class="carousel-description">
 							<h4>Title of Project</h4>
 							<div class="details fl-row">
-								<p>09/09/2017</p>
+								<p>2018</p>
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
@@ -196,134 +200,56 @@
 		</div>
 	</section>
 
-	<section class="sectionGrey">
+	<section class="photoDiv">
 		<div class="wrapper">
-			<div>
+			<div class="sectionTitle">
 				<h2>Photography Portfolio</h2>
 				<div class="keyline"></div>
 			</div>
-			<div class="photo-section">
-				<div class="main-carousel content-wrapper">
-					<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-					<div class="carousel-cell cell row1">
-						<div class="carousel-image photo1"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-cell cell row1">
-						<div class="carousel-image photo2"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-cell cell row1">
-						<div class="carousel-image photo3"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-cell cell row2 hidden">
-						<div class="carousel-image photo4"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-cell cell row2 hidden">
-						<div class="carousel-image photo5"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-cell cell row2 hidden">
-						<div class="carousel-image photo6"></div>
-						<div class="carousel-photo-description">
-							<h4>Title of Project</h4>
-							<div class="previewText">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
-							</div>
-							<div class="action">
-								<button>View Details</button>
-							</div>
-						</div>
-					</div>
-
-				<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-				</div>
+			<div class="carousel"
+			  data-flickity='{ "wrapAround": true }'>
+			  <div class="carousel-cell cell1" id="photo1"></div>
+			  <div class="carousel-cell cell2" id="photo2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
+			  <div class="carousel-cell cell1"></div>
+			  <div class="carousel-cell cell2"></div>
 			</div>
 			
 		</div>
 	</section>
 
-	<section class="posr">
-		<div class='fourthSVG'>
-			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0,0 L 100,0 100,100 30,0 0,100 Z" />
-			</svg>
-		</div>
-		<div class="wrapper fl-col">
-			<div class="section-title">
-				<h2>View My Resume</h2>
-				<div class="keyline"></div>
-			</div>
-			<div class="content-wrapper fl-col">
-				<p>Click here to view my CV</p>
-				<a href="" class="btn btn-light">View my CV</a>
-			</div>
-		</div>
-		<!-- <div class='fifthSVG'>
-			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-				<path d="M0,0 L 0,100 100,100 100,0 70,100 Z" />
-			</svg>
-		</div> -->
-	</section>
+
 </main>
 
-<footer class="sectionGrey">
+<footer class="sectionGrey posr contactDiv">
+	<div class='fourthSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0,0 L 100,0 100,100 30,0 0,100 Z" />
+		</svg>
+	</div>
 	
 	<div class="wrapper">
-		<div>
+		<div class="sectionTitle">
 			<h2>Contact</h2>
 			<div class="keyline"></div>
 		</div>
+		
 		<h4>info@karlaperez.com</h4>
 		<h4>7788886266</h4>
 	</div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="./public/app.js"></script>
 </body>
 
