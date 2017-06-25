@@ -10,12 +10,12 @@
 	<link rel="stylesheet" href="public/styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-<body>
+<body class="homepage">
 <header>
 	<div class="wrapper">
 		<nav class="fl-row">
 			<div class="logo">KP</div>
-			<ul class="nav-bar fl-row">
+			<ul class="nav-bar fl-row testWork" id='nav'>
 				<li>
 					<a id="about_link" href="#about">About</a>
 				</li>
@@ -28,6 +28,10 @@
 				<li>
 					<a id="contact_link" href="#contact">Contact</a>
 				</li>
+				<div class="langMenu" id="spanish">
+					<img src="public/assets/english.png" alt="">
+					<span>ENG</span>
+				</div>
 			</ul>
 			<div class="hamburgerMenu">
 				<div></div>
@@ -49,7 +53,7 @@
 
 <main>
 	<section class="wrapper fl-col aboutDiv">
-		<div class="sectionTitle">
+		<div class="sectionTitle testWork" id="secHeadAbout">
 			<h2>About</h2>
 			<div class="keyline"></div>
 		</div>
@@ -57,17 +61,16 @@
 			<div class="about-photo">
 				<img src="src/assets/girl.jpg" alt="">
 			</div>
-			<div class="about-text">
+			<div class="about-text testWork">
 				<p>
 					Karla Perez is an architect born in Puebla, Mexico, since she was young she has shown talent and interest in architecture and photography showing a special inclination to ecology and environment. She completed her undergraduate studies at  Universidad de las Américas Puebla in Puebla México, during that period she worked in architectural design and construction projects in Mexico and Austria.
 				</p>
 				<p>
 					Currently she resides in Mexico City where she has developed skills and knowledge in luxury finishes, comfort and interiors. Her aim as an architect  is to achieve  a positive impact on society by contributing with innovative ideas in the field of ecology and construction.
-					<a href="" class="btn btn-light viewCV">View my CV</a>
 				</p>
 			</div>
-
 		</div>
+		<a class="btn btn-light viewCV">View my CV</a>
 	</section>
 	<section class="sectionDarkGrey fl-col posr archDiv">
 		<div class='secondSVG'>
@@ -76,7 +79,7 @@
 			</svg>
 		</div>
 		<div class="wrapper">
-			<div class="sectionTitle">
+			<div class="sectionTitle testWork" id="secHeadArch">
 				<h2>Architecture</h2>
 				<div class="keyline"></div>
 			</div>
@@ -91,11 +94,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText testWork" id="previewText1">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project1.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -109,11 +112,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText" id="previewText2">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project2.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -127,11 +130,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText" id="previewText3">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project3.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -145,11 +148,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText" id="previewText4">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project4.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -163,11 +166,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText" id="previewText5">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project5.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -181,11 +184,11 @@
 								<p>Ball State University</p>
 								<p>Indianapolis, Indiana</p>
 							</div>
-							<div class="previewText">
+							<div class="previewText" id="previewText6">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur odio quidem impedit aut voluptates ullam autem similique.</p>
 							</div>
 							<div class="action">
-								<button>View Details</button>
+								<a href="project6.html">View Details</a>
 							</div>
 						</div>
 					</div>
@@ -202,7 +205,7 @@
 
 	<section class="photoDiv">
 		<div class="wrapper">
-			<div class="sectionTitle">
+			<div class="sectionTitle testWork" id="secHeadPhoto">
 				<h2>Photography Portfolio</h2>
 				<div class="keyline"></div>
 			</div>
@@ -239,7 +242,7 @@
 	</div>
 	
 	<div class="wrapper">
-		<div class="sectionTitle">
+		<div class="sectionTitle testWork" id="secHeadContact">
 			<h2>Contact</h2>
 			<div class="keyline"></div>
 		</div>

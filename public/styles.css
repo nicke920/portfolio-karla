@@ -140,6 +140,19 @@ header {
     position: relative;
     height: 90vh; }
 
+.langMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .langMenu img {
+    width: 20px; }
+  .langMenu span {
+    font-size: 10px;
+    margin-left: 5px; }
+
 nav {
   position: fixed;
   left: 0;
@@ -157,7 +170,8 @@ nav {
     color: black; }
 
 .main-nav-scrolled {
-  background: beige;
+  background: #e8e8e8;
+  box-shadow: 0 0 3px 1px lightgrey;
   height: 60px; }
 
 .logo {
@@ -211,6 +225,12 @@ nav {
     margin-bottom: 6px; }
     .hamburgerMenu div:last-child {
       margin-bottom: 0; }
+
+@media (min-width: 569px) {
+  ul.nav-bar.fl-row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important; } }
 
 @media (max-width: 569px) {
   ul.nav-bar.fl-row {
@@ -392,8 +412,7 @@ main > section {
 .viewCV {
   margin-top: 10px;
   position: absolute;
-  left: 15%;
-  bottom: 15%; }
+  bottom: 0; }
 
 .sectionDarkGrey .wrapper, .sectionGrey .wrapper, .photoDiv .wrapper {
   display: -webkit-box;
@@ -437,19 +456,16 @@ main > section {
 .carousel-cell-first {
   margin-bottom: 60px;
   width: calc(50% - 30px);
-  height: 250px;
+  height: 275px;
   overflow: hidden;
   position: relative; }
 
-.carousel-cell-first:nth-of-type(even) {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-left: auto; }
-
 .carousel-image {
-  height: 75%;
+  height: 85%;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  transition: 0.6s;
+  transition-delay: 0.1s; }
 
 .image1 {
   background-image: url("assets/project1.jpg"); }
@@ -459,15 +475,18 @@ main > section {
 
 .carousel-description, .carousel-photo-description {
   transition: 0.4s;
+  transition-delay: 0.1s;
   position: absolute;
   bottom: 0;
-  height: 100px;
+  height: 80px;
   padding: 20px;
   background: linear-gradient(#fcfcfc 30%, rgba(252, 252, 252, 0.6)); }
   .carousel-description .details, .carousel-photo-description .details {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .carousel-description .details p, .carousel-photo-description .details p {
+      margin: 5px 0 0; }
 
 .carousel-photo-description {
   height: 50px; }
@@ -483,11 +502,17 @@ main > section {
 
 .carousel-cell {
   width: 33.3333%;
-  height: 200px;
+  min-height: 200px;
   margin-right: 5px;
   border-radius: 5px;
   counter-increment: carousel-cell;
   margin-bottom: 0; }
+
+@media (min-width: 1330px) {
+  .carousel-cell {
+    min-height: 300px; }
+  .carousel-cell-first {
+    height: 400px; } }
 
 .cell1 {
   background-image: url("../public/assets/project1.jpg");
@@ -509,6 +534,9 @@ main > section {
 .posr {
   position: relative;
   padding: 150px 0; }
+
+.aboutDiv {
+  position: relative; }
 
 .aboutDiv, .photoDiv {
   padding: 80px 0; }
@@ -599,6 +627,26 @@ main > section {
   .viewCV {
     bottom: 0; } }
 
+@media (max-width: 1180px) {
+  .carousel-description {
+    height: 53px; } }
+
+@media (max-width: 980px) {
+  .main-carousel-first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .carousel-description {
+    height: 85px; }
+  .carousel-cell-first {
+    width: 100%;
+    max-width: 600px;
+    height: 350px; }
+  .carousel-cell-first:nth-child(even) {
+    -ms-flex-item-align: end;
+        align-self: flex-end; } }
+
 @media (max-width: 840px) {
   .about-box {
     -webkit-box-orient: vertical;
@@ -612,4 +660,10 @@ main > section {
   .viewCV {
     left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); } }
+            transform: translateX(-50%); }
+  .carousel-cell {
+    width: 50%; } }
+
+@media (max-width: 450px) {
+  .carousel-cell {
+    width: 75%; } }

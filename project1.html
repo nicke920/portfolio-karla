@@ -9,42 +9,48 @@
 	<link rel="stylesheet" href="public/styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-<body id="detailPage">
-	<header>
-		<div class="wrapper">
-			<nav class="fl-row">
-				<div class="logo">KP</div>
-				<ul class="nav-bar fl-row">
-					<li>
-						<a href="">Home</a>
-					</li>
-					<li>
-						<a href="">About</a>
-					</li>
-					<li>
-						<a href="">Architecture</a>
-					</li>
-					<li>
-						<a href="">Photography</a>
-					</li>
-					<li>
-						<a href="">Contact</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="header-text">
-				<h1>Project 1</h1>
-				<p>Very short description of project</p>
+<body id="detailPage" class="proj1">
+<header>
+	<div class="wrapper">
+		<nav class="fl-row">
+			<div class="logo">KP</div>
+			<ul class="nav-bar fl-row testWork" id='nav'>
+				<li>
+					<a id="about_link" href="#about">About</a>
+				</li>
+				<li>
+					<a id="arch_link" href="#architecture">Architecture</a>
+				</li>
+				<li>
+					<a id="photo_link" href="#photography">Photography</a>
+				</li>
+				<li>
+					<a id="contact_link" href="#contact">Contact</a>
+				</li>
+				<div class="langMenu" id="spanish">
+					<img src="public/assets/english.png" alt="">
+					<span>ENG</span>
+				</div>
+			</ul>
+			<div class="hamburgerMenu">
+				<div></div>
+				<div></div>
+				<div></div>
 			</div>
+		</nav>
+		<div class="header-text">
+			<h1>Project #1 Title</h1>
+			<p>Short description of project details </p>
 		</div>
-		<div class='firstSVG'>
-			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-			<path d="M0, 0 L 0,100 100,100 100,0 70,100 Z" />
-			</svg>
-		</div>
-	</header>
+	</div>
+	<div class='firstSVG'>
+		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+		<path d="M0, 0 L 0,100 100,100 100,0 70,100 Z" />
+		</svg>
+	</div>
+</header>
 
-	<main>
+	<main id="main">
 		<section class="wrapper fl-col aboutDiv">
 			<div class="sectionTitle">
 				<h2>Description</h2>

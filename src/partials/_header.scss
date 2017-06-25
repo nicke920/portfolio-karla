@@ -12,6 +12,17 @@ header {
 	}
 }
 
+.langMenu {
+	display: flex;
+	align-items: center;
+	img {
+		width: 20px;
+	}
+	span {
+		font-size: 10px;
+		margin-left: 5px;
+	}
+}
 
 
 
@@ -30,7 +41,8 @@ nav {
 }
 
 .main-nav-scrolled {
-	background: beige;
+	background: #e8e8e8;
+	box-shadow: 0 0 3px 1px lightgrey;
 	height: 60px;
 }
 
@@ -100,10 +112,15 @@ nav {
 			}
 		}
 }
-
+@media (min-width: 569px) {
+	ul.nav-bar.fl-row {
+		display: flex!important;
+	}
+}
 @media (max-width: 569px) {
 	ul.nav-bar.fl-row {
 		display: none;
+		// visibility: hidden;
 		position: absolute;
 		top: 60px;
 		left: 0;

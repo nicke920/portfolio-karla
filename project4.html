@@ -9,32 +9,38 @@
 	<link rel="stylesheet" href="public/styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
-<body id="detailPage">
+<body id="detailPage" class="proj4">
 	<header>
 		<div class="wrapper">
 			<nav class="fl-row">
 				<div class="logo">KP</div>
-				<ul class="nav-bar fl-row">
+				<ul class="nav-bar fl-row testWork" id='nav'>
 					<li>
-						<a href="">Home</a>
+						<a id="about_link" href="#about">About</a>
 					</li>
 					<li>
-						<a href="">About</a>
+						<a id="arch_link" href="#architecture">Architecture</a>
 					</li>
 					<li>
-						<a href="">Architecture</a>
+						<a id="photo_link" href="#photography">Photography</a>
 					</li>
 					<li>
-						<a href="">Photography</a>
+						<a id="contact_link" href="#contact">Contact</a>
 					</li>
-					<li>
-						<a href="">Contact</a>
-					</li>
+					<div class="langMenu" id="spanish">
+						<img src="public/assets/english.png" alt="">
+						<span>ENG</span>
+					</div>
 				</ul>
+				<div class="hamburgerMenu">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</nav>
 			<div class="header-text">
-				<h1>Project 4</h1>
-				<p>Very short description of project</p>
+				<h1>Project #4 Title</h1>
+				<p>Short description of project details </p>
 			</div>
 		</div>
 		<div class='firstSVG'>
@@ -44,7 +50,7 @@
 		</div>
 	</header>
 
-	<main>
+	<main id="main">
 		<section class="wrapper fl-col aboutDiv">
 			<div class="sectionTitle">
 				<h2>Description</h2>
@@ -108,7 +114,7 @@
 		</div>
 		
 		<div class="wrapper">
-			<div class="sectionTitle">
+			<div class="sectionTitle testWork" id="secHeadContact">
 				<h2>Contact</h2>
 				<div class="keyline"></div>
 			</div>

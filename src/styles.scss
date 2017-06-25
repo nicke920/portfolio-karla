@@ -180,8 +180,7 @@ main>section {
 .viewCV {
 	margin-top: 10px;
 	position: absolute;
-	left: 15%;
-	bottom: 15%;
+	bottom: 0;
 }
 
 
@@ -226,20 +225,19 @@ main>section {
 .carousel-cell-first {
 	margin-bottom: 60px;
 	width: calc(50% - 30px);
-	height: 250px;
+	height: 275px;
 	// min-width: 450px; 
 	overflow: hidden;
 	position: relative;
 }
-.carousel-cell-first:nth-of-type(even) {
-	align-self: flex-end;
-	margin-left: auto;
-}
+
 
 .carousel-image {
-	height: 75%;
+	height: 85%;
 	background-size: cover;
 	background-position: center;
+	transition: 0.6s;
+	transition-delay: 0.1s;
 }
 
 .image1 {
@@ -251,21 +249,28 @@ main>section {
 
 .carousel-description, .carousel-photo-description {
 	transition: 0.4s;
+	transition-delay: 0.1s;
 	position: absolute;
 	bottom: 0;
-	height: 100px;
+	height: 80px;
 	padding: 20px;
 	background: linear-gradient(rgba($white, 1) 30%, rgba($white, 0.6)) ;
 	.details {
 		justify-content: space-between;
+		p {
+			margin: 5px 0 0;
+		}
 	}
 }
+
+
 .carousel-photo-description {
 	height: 50px;
 }
 
 .description-hover {
 	height: 100%;
+
 }
 
 .read-more {
@@ -281,11 +286,19 @@ main>section {
 
 .carousel-cell {
   width: 33.3333%;
-  height: 200px;
+  min-height: 200px;
   margin-right: 5px;
   border-radius: 5px;
   counter-increment: carousel-cell;
   margin-bottom: 0;
+}
+@media (min-width: 1330px) {
+	.carousel-cell {
+		min-height: 300px;
+	}
+	.carousel-cell-first {
+		height: 400px;
+	}
 }
 
 .cell1 {
@@ -313,6 +326,9 @@ main>section {
 .posr {
 	position: relative;
 	padding: 150px 0;
+}
+.aboutDiv {
+	position: relative;
 }
 
 .aboutDiv, .photoDiv {
@@ -394,19 +410,7 @@ main>section {
 
 
 @media (max-width: 990px) {
-	// .about-box {
-	// 	flex-wrap: wrap;
-	// 	justify-content: center;
-	// 	.about-photo {
-	// 		width: 35%;
-	// 	}
-	// 	.about-text {
-	// 		width: 100%;
-	// 		p {
-	// 			width: 50%;
-	// 		}
-	// 	}
-	// }
+
 	.about-box {
 		justify-content: space-between;
 		.about-text {
@@ -429,6 +433,31 @@ main>section {
 	}
 }
 
+@media (max-width: 1180px) {
+	.carousel-description {
+		height: 53px;
+	}
+}
+
+@media (max-width: 980px) {
+	.main-carousel-first {
+		flex-direction: column;
+	}
+	.carousel-description {
+		height: 85px;
+	}
+	.carousel-cell-first {
+		width: 100%;
+		max-width: 600px;
+		height: 350px;
+		
+	}
+	.carousel-cell-first:nth-child(even) {
+		align-self: flex-end;
+	}
+
+}
+
 @media (max-width: 840px) {
 	.about-box {
 		flex-direction: column;
@@ -444,4 +473,15 @@ main>section {
 		left: 50%;
 		transform: translateX(-50%);
 	}
+	.carousel-cell {
+		width: 50%;
+	}
 }
+
+@media (max-width: 450px) {
+	.carousel-cell {
+		width: 75%;
+	}
+}
+
+
